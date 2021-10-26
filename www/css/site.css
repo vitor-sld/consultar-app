@@ -1,0 +1,16 @@
+.top{
+background-color: rgb(31, 174, 199);
+font-weight: 400;
+    
+}
+#titulos h5{
+font-weight: 500;
+}
+
+#titulos h6{
+    font-weight: 400;
+    }
+
+.size-90{
+    width: 90%;
+}

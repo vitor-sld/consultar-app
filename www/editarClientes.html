@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script> 
+        <script src="js/popper.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script>
+	 	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+		<script src="js/firebase.js"></script>
+		<script src="js/editar.js"></script>
+        <title>APLICATIVO</title>
+    </head>
+<body> 
+    <Header>
+        <div class="container-fluid fw-bolder bg-dark">
+            <div class="row">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastrar
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="consultarClientes.html" class="dropdown-item"  >Consultar</a></li>
+                        <li><a href="index.html" class="dropdown-item"  >Cadastrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Header>
+
+    <section id="formulário">
+        <h1 class="h1 mt-3 text-center"> Formulário para cadastrar clientes</h1>
+        <div class="container mt-3" id="containerCorpo">
+
+            <div class="row mt-3">
+                <div class="col-12 col-sm-3">
+                    <label for="txtNome" class="form-label col-form-label">Nome:</label>
+                </div>
+                <div class="col-12 col-sm-9">
+
+                    <input type="text" id="txtNome" name="txtNome" class="form-control" placeholder="Exemplo: Maria das Neves">
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12 col-sm-3">
+                    <label for="TxtTelefone" class="form-label col-form-label">Telefone:</label>
+                </div>
+                <div class="col-12 col-sm-9">
+
+                    <input type="text" id="TxtTelefone" class="form-control" placeholder="(XX) XXXXX-XXXX">
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12 col-sm-3">
+                    <label for="txtOrigem" class="form-label col-form-label">Origem:</label>
+                </div>
+                <div class="col-12 col-sm-9">
+                    <select class="form-control" required name="txtOrigem" id="txtOrigem">
+                        <option value="Celular"> Celular</option>
+                        <option value="Telefone"> Telefone</option>
+                        <option value="Fax"> Fax</option>
+                    </select>
+
+                </div>
+            </div>
+        
+
+            <div class="row mt-3">
+                <div class="col-12 col-sm-3">
+                    <label for="txtDataContato" class="form-label col-form-label">Data Contato</label>
+                </div>
+                <div class="col-12 col-sm-9">
+
+                    <input type="date" class="form-control" required name="txtDataContato" id="txtDataContato" placeholder="Exemplo: 111.222.333-4">
+                </div>
+            </div>
+        
+
+        <div class="row mt-3">
+            <div class="col-12 col-sm-3">
+                <label for="txtObservacao" class="form-label col-form-label">Observações</label>
+            </div>
+            <div class="col-12 col-sm-9">
+
+                <textarea type="textarea" id="txtObservacao" row="3" class="form-control" placeholder="Exemplo: Cadastro realizado após..."></textarea>
+            </div>
+        </div>
+
+							<button type="submit" id="btnBuscar" class="btn btn-primary">Buscar</button>
+							<button type="submit" id="btnEditar" class="btn btn-primary">Editar</button>
+						</form>
+					</p>
+				</div>
+    </section>
+</body>
+</html>
